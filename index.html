@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Phước Dương — Portfolio</title>
+  <meta name="description" content="Portfolio của Phước Dương — projects, blog và liên hệ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN for quick utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-inter">
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <a href="/" class="text-xl font-semibold">Phước Dương</a>
+
+    <nav id="mainNav" class="space-x-4 hidden md:flex" aria-label="Main navigation">
+      <a href="#projects" class="hover:text-indigo-600">Projects</a>
+      <a href="#blog" class="hover:text-indigo-600">Blog</a>
+      <a href="#contact" class="hover:text-indigo-600">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="themeToggle" class="px-3 py-1 border rounded" aria-pressed="false" aria-label="Chuyển giao diện tối/sáng">Dark</button>
+
+      <button id="menuBtn" class="md:hidden p-2 rounded" aria-controls="mainNav" aria-expanded="false" aria-label="Mở menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <!-- Hero -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-12">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Xin chào — Mình là Phước Dương</h1>
+        <p class="text-lg text-gray-700 mb-6">Mình xây dựng sản phẩm web đẹp, hiệu năng cao và trải nghiệm người dùng mượt mà.</p>
+        <div class="flex gap-4">
+          <a href="#projects" class="inline-block bg-indigo-600 text-white px-5 py-3 rounded shadow hover:bg-indigo-500 transition">Xem Projects</a>
+          <a href="#contact" class="inline-block border border-gray-300 px-5 py-3 rounded hover:bg-gray-100 transition">Liên hệ</a>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-md">
+        <img src="/assets/images/hero-illustration.svg" alt="Illustration" class="w-full animate-float" />
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="my-16">
+      <h2 class="text-2xl font-semibold mb-6">Một số dự án tiêu biểu</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="p-5 border rounded-lg hover:shadow-lg transition">
+          <h3 class="font-semibold">Project A</h3>
+          <p class="text-sm text-gray-600 mt-2">Mô tả ngắn về project, tech stack và vai trò của bạn.</p>
+          <div class="mt-4">
+            <a href="#" class="text-indigo-600 hover:underline">Xem chi tiết →</a>
+          </div>
+        </article>
+
+        <article class="p-5 border rounded-lg hover:shadow-lg transition">
+          <h3 class="font-semibold">Project B</h3>
+          <p class="text-sm text-gray-600 mt-2">Mô tả ngắn khác, tech stack, liên kết demo hoặc repo.</p>
+          <div class="mt-4">
+            <a href="#" class="text-indigo-600 hover:underline">Xem chi tiết →</a>
+          </div>
+        </article>
+
+        <article class="p-5 border rounded-lg hover:shadow-lg transition">
+          <h3 class="font-semibold">Project C</h3>
+          <p class="text-sm text-gray-600 mt-2">Một ví dụ project nữa để bố cục trông đầy đủ.</p>
+          <div class="mt-4">
+            <a href="#" class="text-indigo-600 hover:underline">Xem chi tiết →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="my-16">
+      <h2 class="text-2xl font-semibold mb-6">Bài viết mới</h2>
+      <ul class="space-y-4">
+        <li class="p-4 border rounded-lg hover:bg-gray-50 transition">
+          <a href="#" class="font-medium">Tên bài viết — 2025-10-01</a>
+          <p class="text-sm text-gray-600 mt-1">Tóm tắt ngắn về nội dung bài viết để người đọc quyết định click.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="my-16">
+      <h2 class="text-2xl font-semibold mb-6">Liên hệ</h2>
+      <p class="text-gray-700 mb-4">Email: <a href="mailto:you@example.com" class="text-indigo-600">you@example.com</a></p>
+      <p class="text-gray-700">Hoặc kết nối qua <a href="#" class="text-indigo-600">LinkedIn</a> / <a href="#" class="text-indigo-600">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer class="border-t mt-12 py-6 text-center text-sm text-gray-500">
+    © <span id="year"></span> Phước Dương — Built with care.
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
